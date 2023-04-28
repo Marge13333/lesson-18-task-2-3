@@ -60,8 +60,11 @@ function Slider() {
 		renderSlides();
 	}
     
+        setInterval(nextFn, 3000);
+    
 
 
+    
 
 
 
