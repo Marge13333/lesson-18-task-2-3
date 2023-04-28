@@ -6,7 +6,7 @@ function Slider() {
     const button4 = document.getElementById('button4')
     const buttons = document.getElementById('buttons')
 	let activeIndex = 0;
-    
+    let slideIntervalId = null;
 
 	function renderSlides() {
 		slides.forEach((el, i) => {
@@ -50,7 +50,19 @@ function Slider() {
          console.log("interval")
     }, 5000);
 
-   ////////time interval ver avamushave
+    function nextFn() {
+		if (activeIndex === slides.length - 1) {
+			activeIndex = 0;
+		} else {
+			activeIndex++;
+		}
+
+		renderSlides();
+	}
+    
+
+
+
 
 
   
